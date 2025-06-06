@@ -1,0 +1,187 @@
+ body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #d44d30;
+      color: #fff;
+    }
+     header {
+            background-color: #d44d30;
+            color: white;
+            padding: 1rem 2rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transform: translateY(-5px);
+            box-shadow: 0 2px 5px rgb(12, 166, 255);
+          
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        /* Estilos del menú normal */
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 2rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #00a2ff;
+
+        }
+        
+        /* Estilos del botón hamburguesa (oculto por defecto) */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+        }
+        
+        .hamburger span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: white;
+            border-radius: 3px;
+            transition: all 0.3s;
+        }
+        
+        /* Estilos para móviles */
+        @media (max-width: 768px) {
+            /* Ocultamos el menú normal */
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                background-color: #d44d30;
+                padding: 1rem 0;
+            }
+            
+            /* Mostramos el botón hamburguesa */
+            .hamburger {
+                display: flex;
+            }
+            
+            /* Estilos cuando el menú está activo */
+            nav.active ul {
+                display: flex;
+            }
+            
+            nav ul li {
+                margin: 0;
+                text-align: center;
+                padding: 1rem 0;
+            }
+            
+            /* Animación para el botón hamburguesa cuando está activo */
+            .hamburger.active span:nth-child(1) {
+                transform: translateY(9px) rotate(45deg);
+            }
+            
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .hamburger.active span:nth-child(3) {
+                transform: translateY(-9px) rotate(-45deg);
+            }
+        }
+    .banner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #d44d30;
+      color: #ffffff;
+      padding: 20px;
+      transform: translateY(-5px);
+    box-shadow: 0 2px 2px rgb(4, 134, 255);
+
+    }
+    
+    .section-title {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin: 10px 0;
+      align-items: center;
+     
+    }
+    .services, .team, .specialists {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 20px 10px;
+    }
+    .service {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+
+    }
+    .card {
+      background-color: #d44d30;
+      color: #710d99;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      width: 200px;
+      margin: 10px;
+      text-align: center;
+      max-width: 300px;
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+    .footer {
+      background-color: #e2f1d0;
+      color: #000;
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+      flex-wrap: wrap;
+    }
+    .card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgb(180, 212, 255);
+}
+
+    .footer h3 {
+      color: #5a0d03;
+    }
+    .footer .social-icons img {
+      width: 32px;
+      margin: 0 5px;
+    }
+    .copyright {
+      background-color: #312ee9;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 0.9em;
+    }
